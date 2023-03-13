@@ -61,13 +61,16 @@ $ cmd | grep $search_pattern
 Одна из самых насыщенных утилит для поиска файлов в директориях. Примеры скажут
 сами за себя:
 
-```console
+```bash
 # Find all directories named src
 $ find . -name src -type d
+
 # Find all python files that have a folder named test in their path
 $ find . -path '*/test/*.py' -type f
+
 # Find all files modified in the last day
 $ find . -mtime -1
+
 # Find all zip files with size in range 500k to 10M
 $ find . -size +500k -size -10M -name '*.tar.gz'
 ```
@@ -98,12 +101,16 @@ curl является отличным инструментом для не оч
 ```
 - Download the contents of an URL to a file:
    curl {{http://example.com}} -o {{filename}}
+
  - Download a file, saving the output under the filename indicated by the URL:
    curl -O {{http://example.com/filename}}
+
  - Download a file, following [L]ocation redirects, and automatically [C]ontinuing (resuming) a previous file transfer:
    curl -O -L -C - {{http://example.com/filename}}
+
  - Send form-encoded data (POST request of type application/x-www-form-urlencoded). Use -d @file_name or -d @'-' to read from STDIN:
    curl -d {{'name=bob'}} {{http://example.com/form}}
+
  - Send a request with an extra header, using a custom HTTP method:
    curl -H {{'X-My-Header: 123'}} -X {{PUT}} {{http://example.com}}
 ```
@@ -140,6 +147,7 @@ some_thing5
 some_thing6
 some_thing7
 another_string
+
 $ sed 's/some_\(thing[0-9]\)/\1/' file.txt
 thing1
 thing2
@@ -149,6 +157,7 @@ thing5
 thing6
 thing7
 another_string
+
 $ sed -E 's/some_(thing[0-9])/\1/' file.txt
 thing1
 thing2
