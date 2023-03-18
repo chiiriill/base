@@ -72,3 +72,15 @@ Monstr::operator int(){return health;}
 Monstr Vasia; cout << int(Vasia):
 ```
 
+## Перегрузка операции вызова функции
+
+Класс, в котором определена операция вызова функции, называется функциональным. От такого класса не требуется наличия других полей и методов:
+
+```c++
+class IfGreater{
+public:
+  int operator () (int a, int b) const {
+    return a > b;
+  }
+};
+```
