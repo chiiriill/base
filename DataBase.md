@@ -129,3 +129,10 @@ CREATE TABLE book (
     FOREIGN KEY (author_id)  REFERENCES author (author_id) ON DELETE CASCADE
 );
 ```
+
+## Новая таблица на основе данных из другой таблицы
+
+```sql
+CREATE TABLE имя_таблицы AS
+SELECT ...
+```
