@@ -136,3 +136,7 @@ CREATE TABLE book (
 CREATE TABLE имя_таблицы AS
 SELECT ...
 ```
+
+## Математические функции 
+
+![math_function](/images/math_sql.png)
